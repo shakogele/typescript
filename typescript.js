@@ -26,6 +26,27 @@ var Size;
 })(Size || (Size = {}));
 ;
 var sizeName = Size[2];
+// Any - !?
+var anyType = "asda";
+anyType = 5;
+anyType = true;
+anyType = Size.small;
+// Void - deosnot return anything - used in funcitons
+var sing = function () {
+    console.log("Singing");
+};
+// string return example
+var singing = function () {
+    console.log("Singing");
+    return "Singing";
+};
+// never
+var error = function () {
+    throw Error('error');
+};
+var fightRobotArmy = function (robots) {
+    console.log("FIGHT");
+};
 console.log(isCool);
 console.log(age);
 console.log(firstName);
@@ -35,6 +56,10 @@ console.log(und);
 console.log(nul);
 console.log(basket);
 console.log(sizeName);
+console.log(anyType);
+console.log(sing);
+console.log(singing);
+console.log(error);
 var sum = function (a, b) {
     return a + b;
 };
