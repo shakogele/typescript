@@ -54,10 +54,10 @@ let error = (): never => {
 interface RobotArmy {
   count: number,
   type: string,
-  magic: string
+  magic?: string
 }
 // Same effect
-type RobotArmyType {
+type RobotArmyType = {
   count: number,
   type: string,
   magic: string
@@ -66,6 +66,44 @@ type RobotArmyType {
 let fightRobotArmy = (robots: RobotArmy) => {
   console.log("FIGHT")
 }
+
+// Type Assertions
+
+let dog = {} as RobotArmy;
+console.log(dog.count);
+
+// functions
+
+let fightRobotArmy3 = (robots: RobotArmy): void => {
+  console.log("Hello");
+}
+let fightRobotArmyReturnsString = (robots: RobotArmy): string => {
+  return "String";
+}
+let fightRobotArmyReturnsNumber = (robots: RobotArmy): number => {
+  return 20;
+}
+
+// classes
+
+class Animal {
+  sing: string = "singing....";
+  constructor(sound: string){
+    this.sing = sound;
+  }
+
+  greet(){
+    return `hello ${this.sing}`;
+  }
+}
+
+let lion = new Animal("knuw");
+lion.greet();
+lion.sing;
+
+// Union
+let confused: string | number = "Hello";
+
 
 console.log(isCool);
 console.log(age);

@@ -47,6 +47,35 @@ var error = function () {
 var fightRobotArmy = function (robots) {
     console.log("FIGHT");
 };
+// Type Assertions
+var dog = {};
+console.log(dog.count);
+// functions
+var fightRobotArmy3 = function (robots) {
+    console.log("Hello");
+};
+var fightRobotArmyReturnsString = function (robots) {
+    return "String";
+};
+var fightRobotArmyReturnsNumber = function (robots) {
+    return 20;
+};
+// classes
+var Animal = /** @class */ (function () {
+    function Animal(sound) {
+        this.sing = "singing....";
+        this.sing = sound;
+    }
+    Animal.prototype.greet = function () {
+        return "hello " + this.sing;
+    };
+    return Animal;
+}());
+var lion = new Animal("knuw");
+lion.greet();
+lion.sing;
+// Union
+var confused = "Hello";
 console.log(isCool);
 console.log(age);
 console.log(firstName);
